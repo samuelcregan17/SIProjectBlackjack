@@ -20,9 +20,17 @@ def main():
         s_min = 0
         s_max = 255
 
-        #create mask and display original feed and the mask
+        #read video feed and create mask
         _, img = cap.read()
         imgHLS = cv2.cvtColor(img, cv2.COLOR_BGR2HLS)
+
+        #prompt user to scan cards
+        scanUserCardsTxt1 = "To scan your cards, focus your cards"
+        scanUserCardsTxt2 = "and press \'q\' to scan."
+        cv2.putText(img, scanUserCardsTxt1, (10, 420), cv2.FONT_HERSHEY_COMPLEX, .75, (0, 0, 0), 2)
+        cv2.putText(img, scanUserCardsTxt2, (10, 450), cv2.FONT_HERSHEY_COMPLEX, .75, (0, 0, 0), 2)
+
+        #display original image, create mask and display mask
         cv2.imshow("Original", img)
         lower = np.array([h_min, l_min, s_min])
         upper = np.array([h_max, l_max, s_max])
@@ -30,6 +38,8 @@ def main():
         imgResults = cv2.bitwise_and(img, img, mask=mask)
         cv2.imshow("Results", imgResults) #may delete this from final code, don't think we need the mask displayed, good for debugging
 
+
+        #how we exit the loop to capture and identify cards
         if cv2.waitKey(1) & 0xFF ==ord('q'):
             cv2.destroyAllWindows()
 
