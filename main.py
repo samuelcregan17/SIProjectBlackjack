@@ -3,10 +3,13 @@ import cv2
 import numpy as np
 
 #main method is where camera loop exists
+import detectCard
+
+
 def main():
 
     #setup video feed
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(1)
     cap.set(3, 640) #set width
     cap.set(4, 480) #set height
 
@@ -41,6 +44,14 @@ def main():
 
         #how we exit the loop to capture and identify cards
         if cv2.waitKey(1) & 0xFF ==ord('q'):
-            cv2.destroyAllWindows()
+            #call function to create the array of card images
+            cardArray = detectCard.getContours(imgResults, img)
+            numCards = 1
+            #to show the cards we detected (for debugging, may not need in final code)
+            for card in cardArray:
+                winName = "Card " + str(numCards)
+                cv2.imshow(winName, card)
+                numCards += 1
+            #cv2.destroyAllWindows()
 
 main()
