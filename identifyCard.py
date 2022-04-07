@@ -68,3 +68,11 @@ for img in classNames2:
     id = findID(img3, desList)
     print(id)
     print(classNames[id] + "\n")
+
+#create cropped image array for more accurate indentification
+def cropImgs(cardArray):
+    croppedCardArray = []
+    for card in cardArray:
+        croppedCardArray.append(card[0:55, 0:35])
+
+    return croppedCardArray
