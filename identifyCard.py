@@ -6,20 +6,20 @@ path1 = 'Cards' #baseline image directory
 path2 = 'CardsTest' #test image directory
 orb = cv2.ORB_create(nfeatures=2000)
 
-images = []
-images2 = []
-classNames = []
-classNames2 = []
+images = [] #array to store baseline images
+images2 = [] #array to store test images
+classNames = [] #array to store names of baseline images
+classNames2 = [] #array to store names of test images
 myList = os.listdir(path1)  # creates list of all baseline image names
 testList = os.listdir(path2)  # creates list of all test image names
 
-# adds baseline images to an array
+# adds baseline images to 'images' array
 for cl in myList:
     imgCur = cv2.imread(f'{path1}/{cl}', 0)
     images.append(imgCur)
     classNames.append(os.path.splitext(cl)[0])  # store without file extension
 
-# adds test images to an array
+# adds test images to an array to 'images2' array
 for cl in testList:
     imgCur = cv2.imread(f'{path2}/{cl}', 0)
     images2.append(imgCur)
