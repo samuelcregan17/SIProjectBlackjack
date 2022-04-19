@@ -45,25 +45,21 @@ def main():
 
         #how we exit the loop to capture and identify cards
         if cv2.waitKey(1) & 0xFF ==ord('q'):
-            #call function to create the array of card images
+            # call function to create the array of card images
             cardArray = detectCard.getContours(imgResults, img)
 
-            #call function to create cropped image array
-            croppedCardArray = identifyCard.cropImgs(cardArray)
+            # call function to identify each card detected, store name and value of card in arrays
+            cardNames, cardValues = identifyCard.matchCards(cardArray)
+            print(cardNames) # testing
+            print(cardValues) # testing
 
             numCards = 1
-            #to show the cards we detected (for debugging, may not need in final code)
+            # to show the cards we detected (for debugging, may not need in final code)
             for card in cardArray:
                 winName = "Card " + str(numCards)
                 cv2.imshow(winName, card)
                 numCards += 1
 
-            #to show the cropped card array (may not need in final code)
-            y = 1
-            for x in croppedCardArray:
-                winName = "Cropped " + str(y)
-                cv2.imshow(winName, x)
-                y += 1
             #cv2.destroyAllWindows()
 
 main()
