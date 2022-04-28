@@ -2,31 +2,15 @@ import cv2
 import numpy as np
 import os
 
-####DELETE?
-#path1 = 'Cards' #baseline image directory
 path2 = 'CardsTest' #test image directory
 
-####DELETE?
-#images = [] #array to store baseline images
+
 images2 = [] #array to store test images
-#classNames = [] #array to store names of baseline images
+
 classNames2 = [] #array to store names of test images
-#myList = os.listdir(path1)  # creates list of all baseline image names
+
 testList = os.listdir(path2)  # creates list of all test image names
 
-####DELETE?
-# adds baseline images to 'images' array
-# for cl in myList:
-#     imgCur = cv2.imread(f'{path1}/{cl}', 0)
-#     images.append(imgCur)
-#     classNames.append(os.path.splitext(cl)[0])  # store without file extension
-
-####DELETE?
-# adds test images to an array to 'images2' array
-# for cl in testList:
-#     imgCur = cv2.imread(f'{path2}/{cl}', 0)
-#     images2.append(imgCur)
-#     classNames2.append(cl)  # store with file extension
 
 # create the baseline images that we will compare the detected cards to (using bicycle card set)
 def createBaselineImgs():
@@ -71,7 +55,7 @@ def findID(img, desList):
     except:
         pass
 
-    print(matchList)
+    # print(matchList)
     if len(matchList) != 0:
         finalVal = matchList.index(max(matchList))
     return finalVal
@@ -104,24 +88,3 @@ def matchCards(cardArray):
         cardValues.append(cardValue)
 
     return cardNames, cardValues
-
-####DELETE?
-###TESTING
-# desList = findDescription(images)
-# print(classNames)
-# print("")
-# for img in classNames2:
-#     print(img)
-#     img3 = cv2.imread(path2 + '/' + img, 0)
-#     id = findID(img3, desList)
-#     print(id)
-#     print(classNames[id] + "\n")
-
-####DELETE?
-#create cropped image array for more accurate indentification
-def cropImgs(cardArray):
-    croppedCardArray = []
-    for card in cardArray:
-        croppedCardArray.append(card[0:55, 0:35])
-
-    return croppedCardArray
