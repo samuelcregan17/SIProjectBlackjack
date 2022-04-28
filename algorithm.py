@@ -217,3 +217,70 @@ def dealerTurn(dealerCards, deck):
        
         sumDealer = sum(dealerCards)
         return dealerTurn(dealerCards, deck)
+
+def determineMove(playerCards, dealerVisibleCard):
+    sumPlayer = sum(playerCards)
+    sums = []
+    if 1 in playerCards:
+        ace = playerCards.count(1)
+        for i in playerCards:
+            if i == 1:
+                sumPlayer += 10
+
+        while sumPlayer > 21 and ace > 0:
+            sumPlayer -= 10
+            ace -= 1
+    sums.append(sumPlayer)
+    print("Your sum", sumPlayer)
+
+    if sumPlayer >= 17:
+        print("Stand")
+        return sums
+
+    elif sumPlayer >= 13:
+        if dealerVisibleCard in range(2, 7):
+            print("Stand")
+            return sums
+        else:
+            playerCards = hit(playerCards, deck)
+
+    elif sumPlayer == 12:
+        if dealerVisibleCard in range(4, 7):
+            print("Stand")
+            return sums
+        else:
+            playerCards = hit(playerCards, deck)
+
+    elif sumPlayer == 11:
+        if len(playerCards) == 2 and doubleCheck == False:
+            sums = double(playerCards, dealerVisibleCard, deck)
+            print("Stand")
+            return sums
+        else:
+            playerCards = hit(playerCards, deck)
+
+    elif sumPlayer == 10:
+        if dealerVisibleCard == 10 or dealerVisibleCard == 1:
+            playerCards = hit(playerCards, deck)
+        else:
+            if len(playerCards) == 2 and doubleCheck == False:
+                sums = double(playerCards, dealerVisibleCard, deck)
+                print("Stand")
+                return sums
+            else:
+                playerCards = hit(playerCards, deck)
+
+    elif sumPlayer == 9:
+        if dealerVisibleCard in range(3, 7):
+            if len(playerCards) == 2 and doubleCheck == False:
+                sums = double(playerCards, dealerVisibleCard, deck)
+                print("Stand")
+                return sums
+            else:
+                playerCards = hit(playerCards, deck)
+        else:
+            playerCards = hit(playerCards, deck)
+
+    else:
+        playerCards = hit(playerCards, deck)
+    return basicStrategy(playerCards, dealerVisibleCard, deck, doubleCheck)

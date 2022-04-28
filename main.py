@@ -56,9 +56,12 @@ def main():
             # call method to prompt the user to scan the dealers cards
             dealerCardNames, dealerCardValues = scanDealerCards(cap)
 
+            print(dealerCardNames)
             print(dealerCardValues) # testing
 
             ### call to algorithm here using "userCardValues" and "dealerCardValues"
+
+
 
             numCards = 1
             # to show the cards we detected (for debugging, may not need in final code)
