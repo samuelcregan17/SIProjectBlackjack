@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 
 #main method is where camera loop exists
+import algorithm
 import detectCard
 import identifyCard
 
@@ -60,8 +61,8 @@ def main():
             print(dealerCardValues) # testing
 
             ### call to algorithm here using "userCardValues" and "dealerCardValues"
-
-
+            suggestedMove = algorithm.determineMove(playerCardValues, dealerCardValues, False)
+            print(suggestedMove)
 
             numCards = 1
             # to show the cards we detected (for debugging, may not need in final code)
