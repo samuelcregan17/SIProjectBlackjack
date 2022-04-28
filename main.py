@@ -10,7 +10,7 @@ import identifyCard
 def main():
 
     #setup video feed
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(0)
     cap.set(3, 640) #set width
     cap.set(4, 480) #set height
 
@@ -102,10 +102,48 @@ def scanDealerCards(cap):
         imgResults = cv2.bitwise_and(img, img, mask=mask)
         cv2.imshow("Results", imgResults) #may delete this from final code, don't think we need the mask displayed, good for debugging
 
-
         if cv2.waitKey(1) & 0xFF == ord('w'):
             cardArray2 = detectCard.getContours(imgResults, img)
             dealerCardNames, dealerCardValues = identifyCard.matchCards(cardArray2)
             return dealerCardNames, dealerCardValues
+
+def scanPlayerCards(cap):
+    while True:
+        #preset color values for detecting white
+        h_min = 0
+        h_max = 179
+        l_min = 233
+        l_max = 255
+        s_min = 0
+        s_max = 255
+
+        #read video feed and create mask
+        _, img = cap.read()
+        imgHLS = cv2.cvtColor(img, cv2.COLOR_BGR2HLS)
+
+        #prompt user to scan cards
+        scanUserCardsTxt3 = "To scan your cards, focus your cards"
+        scanUserCardsTxt4 = "and press \'q\' to scan."
+        cv2.putText(img, scanUserCardsTxt3, (10, 420), cv2.FONT_HERSHEY_COMPLEX, .75, (0, 0, 0), 2)
+        cv2.putText(img, scanUserCardsTxt4, (10, 450), cv2.FONT_HERSHEY_COMPLEX, .75, (0, 0, 0), 2)
+
+        #display original image, create mask and display mask
+        cv2.imshow("Original", img)
+        lower = np.array([h_min, l_min, s_min])
+        upper = np.array([h_max, l_max, s_max])
+        mask = cv2.inRange(imgHLS, lower, upper)
+        imgResults = cv2.bitwise_and(img, img, mask=mask)
+        cv2.imshow("Results", imgResults) #may delete this from final code, don't think we need the mask displayed, good for debugging
+
+        # how we exit the loop to capture and identify cards
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            # call function to create the array of card images
+            cardArray = detectCard.getContours(imgResults, img)
+
+            # call function to identify each card detected, store name and value of card in arrays
+            playerCardNames, playerCardValues = identifyCard.matchCards(cardArray)
+            print(playerCardNames)  # testing
+            print(playerCardValues)  # testing
+            return playerCardNames, playerCardValues
 
 main()
