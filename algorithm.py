@@ -6,7 +6,7 @@ Created on Thu Mar 31 10:35:58 2022
 """
 
 
-from pylab import *
+# from pylab import *
 import math
 import numpy as np
 import random
@@ -218,7 +218,7 @@ def dealerTurn(dealerCards, deck):
         sumDealer = sum(dealerCards)
         return dealerTurn(dealerCards, deck)
 
-def determineMove(playerCards, dealerVisibleCard):
+def determineMove(playerCards, dealerVisibleCard, doubleCheck):
     sumPlayer = sum(playerCards)
     sums = []
     if 1 in playerCards:
@@ -231,56 +231,46 @@ def determineMove(playerCards, dealerVisibleCard):
             sumPlayer -= 10
             ace -= 1
     sums.append(sumPlayer)
-    print("Your sum", sumPlayer)
 
     if sumPlayer >= 17:
-        print("Stand")
-        return sums
+        return "Stand"
 
     elif sumPlayer >= 13:
         if dealerVisibleCard in range(2, 7):
-            print("Stand")
-            return sums
+            return "Stand"
         else:
-            playerCards = hit(playerCards, deck)
+            return "Hit"
 
     elif sumPlayer == 12:
         if dealerVisibleCard in range(4, 7):
-            print("Stand")
-            return sums
+            return "Stand"
         else:
-            playerCards = hit(playerCards, deck)
+            return "Hit"
 
     elif sumPlayer == 11:
         if len(playerCards) == 2 and doubleCheck == False:
-            sums = double(playerCards, dealerVisibleCard, deck)
-            print("Stand")
-            return sums
+            return "Stand"
         else:
-            playerCards = hit(playerCards, deck)
+            return "Hit"
 
     elif sumPlayer == 10:
         if dealerVisibleCard == 10 or dealerVisibleCard == 1:
-            playerCards = hit(playerCards, deck)
+            return "Hit"
         else:
             if len(playerCards) == 2 and doubleCheck == False:
-                sums = double(playerCards, dealerVisibleCard, deck)
-                print("Stand")
-                return sums
+                return "Stand"
             else:
-                playerCards = hit(playerCards, deck)
+                return "Hit"
 
     elif sumPlayer == 9:
         if dealerVisibleCard in range(3, 7):
             if len(playerCards) == 2 and doubleCheck == False:
-                sums = double(playerCards, dealerVisibleCard, deck)
-                print("Stand")
-                return sums
+                return "Stand"
             else:
-                playerCards = hit(playerCards, deck)
+                return "Hit"
         else:
-            playerCards = hit(playerCards, deck)
+            return "Hit"
 
     else:
-        playerCards = hit(playerCards, deck)
-    return basicStrategy(playerCards, dealerVisibleCard, deck, doubleCheck)
+        return "Hit"
+
