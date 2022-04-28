@@ -2,111 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e97988ea-e098-41bd-8942-fb3a31e9cad0" name="Changes" comment="Finally add all Final Images">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/newgit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/newgit.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/2C.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/2D.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/2H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/2S.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/3C.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/3D.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/3H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/3S.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/4C.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/4D.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/4H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/4S.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/5C.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/5D.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/5H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/5S.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/6C.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/6D.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/6H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/6S.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/7C.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/7D.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/7H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/7S.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/8C.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/8D.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/8H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/8S.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/9C.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/9D.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/9H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/9S.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/AC.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/AD.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/AH.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/AS.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/JC.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/JD.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/JH.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/JS.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/KC.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/KD.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/KH.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/KS.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/QC.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/QD.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/QH.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/QS.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/TC.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/TD.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/TH.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Images/TS.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/2C.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/2D.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/2H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/2S.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/3C.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/3D.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/3H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/3S.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/4C.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/4D.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/4H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/4S.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/5C.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/5D.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/5H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/5S.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/6C.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/6D.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/6H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/6S.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/7C.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/7D.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/7H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/7S.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/8C.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/8D.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/8H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/8S.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/9C.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/9D.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/9H.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/9S.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/AC.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/AD.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/AH.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/AS.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/JC.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/JD.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/JH.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/JS.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/KC.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/KD.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/KH.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/KS.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/QC.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/QD.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/QH.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/QS.heic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/TC.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/TD.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/TH.HEIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final Templates/TS.HEIC" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identifyCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/identifyCard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +74,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="identifyCard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="identifyCard" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="newgit" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -194,18 +95,18 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="newgit" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -215,10 +116,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.identifyCard" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.ImageClassifier" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.identifyCard" />
         <item itemvalue="Python.ImageClassifier" />
       </list>
     </recent_temporary>

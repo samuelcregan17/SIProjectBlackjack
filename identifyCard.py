@@ -30,7 +30,7 @@ testList = os.listdir(path2)  # creates list of all test image names
 
 # create the baseline images that we will compare the detected cards to (using bicycle card set)
 def createBaselineImgs():
-    path1 = 'Cards'
+    path1 = 'Final Images'
     images = []
     classNames = []
     myList = os.listdir(path1)
@@ -79,26 +79,13 @@ def findID(img, desList):
 # determines the number value of the card based on the card description
 def determineCardVal(cardName):
     cardVal = 10 # set initial value to ten, if the card is not 1 - 9, then it is 10 or face card
-    cardName = cardName.split()
-    firstWord = cardName[0]
-    if firstWord == 'Ace':
+    firstLetter = cardName[0]
+    if firstLetter == 'T' or firstLetter == 'J' or firstLetter == 'Q' or firstLetter == 'K':
+        cardVal = 10
+    elif firstLetter == 'A':
         cardVal = 1
-    elif firstWord == 'Two':
-        cardVal = 2
-    elif firstWord == 'Three':
-        cardVal = 3
-    elif firstWord == 'Four':
-        cardVal = 4
-    elif firstWord == 'Five':
-        cardVal = 5
-    elif firstWord == 'Six':
-        cardVal = 6
-    elif firstWord == 'Seven':
-        cardVal = 7
-    elif firstWord == 'Eight':
-        cardVal = 8
-    elif firstWord == 'Nine':
-        cardVal = 9
+    else:
+        cardVal = int(firstLetter)
 
     return cardVal
 
