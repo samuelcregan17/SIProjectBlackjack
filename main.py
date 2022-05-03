@@ -13,7 +13,7 @@ def main():
     # set up text prompts
     userPrompt = "To scan your cards, focus your cards"
     dealerPrompt = "To scan dealer's card, focus the card"
-    playAgainPrompt = "To play again, press e'w'. To quit, press 'e'"
+    playAgainPrompt = "To play again, press 'w'. To quit, press 'e'"
 
     #setup video feed
     cap = cv2.VideoCapture(1)
@@ -45,7 +45,7 @@ def scanCards(cap, prompt1):
         #preset color values for detecting white
         h_min = 0
         h_max = 179
-        l_min = 233
+        l_min = 200 #233
         l_max = 255
         s_min = 0
         s_max = 255
@@ -56,8 +56,8 @@ def scanCards(cap, prompt1):
 
         #prompt user to scan cards
         prompt2 = "and press \'q\' to scan."
-        cv2.putText(img, prompt1, (10, 420), cv2.FONT_HERSHEY_COMPLEX, .75, (0, 0, 0), 2)
-        cv2.putText(img, prompt2, (10, 450), cv2.FONT_HERSHEY_COMPLEX, .75, (0, 0, 0), 2)
+        cv2.putText(img, prompt1, (10, 420), cv2.FONT_HERSHEY_COMPLEX, .75, (255, 0, 0), 2)
+        cv2.putText(img, prompt2, (10, 450), cv2.FONT_HERSHEY_COMPLEX, .75, (255, 0, 0), 2)
 
         #display original image, create mask and display mask
         cv2.imshow("Original", img)

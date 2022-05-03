@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e97988ea-e098-41bd-8942-fb3a31e9cad0" name="Changes" comment="cleaned up main and identifycard">
+    <list default="true" id="e97988ea-e098-41bd-8942-fb3a31e9cad0" name="Changes" comment="added play again loop logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -217,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651165379466</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added play again loop logic">
+      <created>1651594240302</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1651594240302</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -250,6 +257,7 @@
     <MESSAGE value="Finally Actually add all Final Images" />
     <MESSAGE value="unknown" />
     <MESSAGE value="cleaned up main and identifycard" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaned up main and identifycard" />
+    <MESSAGE value="added play again loop logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="added play again loop logic" />
   </component>
 </project>
