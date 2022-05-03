@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e97988ea-e098-41bd-8942-fb3a31e9cad0" name="Changes" comment="unknown">
+    <list default="true" id="e97988ea-e098-41bd-8942-fb3a31e9cad0" name="Changes" comment="cleaned up main and identifycard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identifyCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/identifyCard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651162068364</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="cleaned up main and identifycard">
+      <created>1651165379466</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1651165379466</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -243,6 +249,7 @@
     <MESSAGE value="Finally add all Final Images" />
     <MESSAGE value="Finally Actually add all Final Images" />
     <MESSAGE value="unknown" />
-    <option name="LAST_COMMIT_MESSAGE" value="unknown" />
+    <MESSAGE value="cleaned up main and identifycard" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up main and identifycard" />
   </component>
 </project>

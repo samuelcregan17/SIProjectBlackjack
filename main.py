@@ -13,21 +13,30 @@ def main():
     # set up text prompts
     userPrompt = "To scan your cards, focus your cards"
     dealerPrompt = "To scan dealer's card, focus the card"
+    playAgainPrompt = "To play again, press e'w'. To quit, press 'e'"
 
     #setup video feed
     cap = cv2.VideoCapture(1)
     cap.set(3, 640) #set width
     cap.set(4, 480) #set height
+    while True:
+        # call method to prompt the user to scan the players cards
+        playerCardNames, playerCardValues = scanCards(cap, userPrompt)
 
-    # call method to prompt the user to scan the players cards
-    playerCardNames, playerCardValues = scanCards(cap, userPrompt)
+        # call method to prompt the user to scan the dealers cards
+        dealerCardNames, dealerCardValues = scanCards(cap, dealerPrompt)
 
-    # call method to prompt the user to scan the dealers cards
-    dealerCardNames, dealerCardValues = scanCards(cap, dealerPrompt)
+        ### call to algorithm here using "userCardValues" and "dealerCardValues"
+        suggestedMove = algorithm.determineMove(playerCardValues, dealerCardValues, False)
+        print(suggestedMove)
 
-    ### call to algorithm here using "userCardValues" and "dealerCardValues"
-    suggestedMove = algorithm.determineMove(playerCardValues, dealerCardValues, False)
-    print(suggestedMove)
+        playAgain = displayMove(cap, playAgainPrompt, suggestedMove)
+
+        if playAgain:
+            pass
+        else:
+            break
+
 
 
 # this method is how we prompt the user to scan the correct cards
@@ -64,5 +73,21 @@ def scanCards(cap, prompt1):
             print(cardNames)  # testing
             print(cardValues)  # testing
             return cardNames, cardValues
+
+def displayMove(cap, prompt, move):
+    move = move + "!"
+    while True:
+        _, img = cap.read()
+
+        cv2.putText(img, move, (10, 50), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
+        cv2.putText(img, prompt, (10, 450), cv2.FONT_HERSHEY_COMPLEX, .75, (0, 0, 0), 2)
+
+        cv2.imshow("Original", img)
+
+        if cv2.waitKey(1) & 0xFF == ord('w'):
+            return True
+        elif cv2.waitKey(1) & 0xFF == ord('e'):
+            return False
+
 
 main()
