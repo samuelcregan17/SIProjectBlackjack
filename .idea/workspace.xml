@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e97988ea-e098-41bd-8942-fb3a31e9cad0" name="Changes" comment="added play again loop logic">
+    <list default="true" id="e97988ea-e098-41bd-8942-fb3a31e9cad0" name="Changes" comment="prompt color changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detectCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/detectCard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651594240302</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="prompt color changes">
+      <created>1651597352821</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1651597352821</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -258,6 +266,7 @@
     <MESSAGE value="unknown" />
     <MESSAGE value="cleaned up main and identifycard" />
     <MESSAGE value="added play again loop logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="added play again loop logic" />
+    <MESSAGE value="prompt color changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="prompt color changes" />
   </component>
 </project>
