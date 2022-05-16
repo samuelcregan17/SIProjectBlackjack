@@ -220,6 +220,12 @@ def dealerTurn(dealerCards, deck):
 
 def determineMove(playerCards, dealerVisibleCard, doubleCheck):
     sumPlayer = sum(playerCards)
+    if (playerCards[0] == 10 and playerCards[1] == 1) or (playerCards[0] == 1 and playerCards[1] == 10):
+        return ";) Nice"
+    if sumPlayer > 21:
+        return "Bust"
+    if sumPlayer == 21:
+        return ";) Nice"
     sums = []
     if 1 in playerCards:
         ace = playerCards.count(1)

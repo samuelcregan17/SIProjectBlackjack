@@ -11,10 +11,10 @@ import identifyCard
 def main():
 
     # set up text prompts
-    userPrompt = "To scan your cards, focus your 2 cards"
-    dealerPrompt = "To scan dealer's card, focus the dealers 1 card"
+    userPrompt = "To scan your cards, focus your cards"
+    dealerPrompt = "To scan dealer's card, focus the dealers card"
     playAgainPrompt = "To play again, press 'w'. To quit, press 'e'"
-    badScanPrompt = "Incorrect number of cards scanned"
+    continuePrompt = "Press 'w' when ready to scan your next card."
 
     #setup video feed
     cap = cv2.VideoCapture(1)
@@ -22,29 +22,30 @@ def main():
     cap.set(4, 480) #set height
     while True:
         # call method to prompt the user to scan the players cards
-        playerCardNames, playerCardValues, correctNumCards = scanCards(cap, userPrompt, 2)
+        playerCardNames, playerCardValues = scanCards(cap, userPrompt)
         print(playerCardNames)
         print(playerCardValues)
 
-        if correctNumCards:
-            # call method to prompt the user to scan the dealers cards
-            dealerCardNames, dealerCardValues, correctNumCards = scanCards(cap, dealerPrompt, 1)
-            print(dealerCardNames)
-            print(dealerCardValues)
 
-            if correctNumCards:
+        # call method to prompt the user to scan the dealers cards
+        dealerCardNames, dealerCardValues = scanCards(cap, dealerPrompt)
+        print(dealerCardNames)
+        print(dealerCardValues)
 
-                # call to algorithm here using "userCardValues" and "dealerCardValues"
-                suggestedMove = algorithm.determineMove(playerCardValues, dealerCardValues, False)
-                #testing print(suggestedMove)
 
-                playAgain = displayMove(cap, playAgainPrompt, suggestedMove)
+        # call to algorithm here using "userCardValues" and "dealerCardValues"
+        suggestedMove = algorithm.determineMove(playerCardValues, dealerCardValues, False)
+        #testing print(suggestedMove)
 
-            else:
-                playAgain = displayMove(cap, playAgainPrompt, badScanPrompt)
+        while suggestedMove == "Hit":
+            displayMove(cap, continuePrompt, suggestedMove)
+            playerCardNames, playerCardValues = scanCards(cap, userPrompt)
+            print(playerCardNames)
+            print(playerCardValues)
+            suggestedMove = algorithm.determineMove(playerCardValues, dealerCardValues, False)
 
-        else:
-            playAgain = displayMove(cap, playAgainPrompt, badScanPrompt)
+        playAgain = displayMove(cap, playAgainPrompt, suggestedMove)
+
 
         if playAgain:
             pass
@@ -52,9 +53,8 @@ def main():
             break
 
 
-
 # this method is how we prompt the user to scan the correct cards
-def scanCards(cap, prompt1, howMany):
+def scanCards(cap, prompt1):
     while True:
         #preset color values for detecting white
         h_min = 0
@@ -85,9 +85,7 @@ def scanCards(cap, prompt1, howMany):
             cardArray2 = detectCard.getContours(imgResults, img)
             cardNames, cardValues = identifyCard.matchCards(cardArray2)
 
-            # boolean to see if the correct number of cards were scanned
-            correctNumCards = len(cardArray2) == howMany
-            return cardNames, cardValues, correctNumCards
+            return cardNames, cardValues
 
 def displayMove(cap, prompt, move):
     move = move + "!"

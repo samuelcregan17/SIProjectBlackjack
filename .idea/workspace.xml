@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e97988ea-e098-41bd-8942-fb3a31e9cad0" name="Changes" comment="prompt color changes">
+    <list default="true" id="e97988ea-e098-41bd-8942-fb3a31e9cad0" name="Changes" comment="commented some testing stuff, added catch for incorrect number of cards scanned, can take out later">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detectCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/detectCard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -232,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651597352821</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="commented some testing stuff, added catch for incorrect number of cards scanned, can take out later">
+      <created>1652656209588</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652656209588</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -267,6 +274,7 @@
     <MESSAGE value="cleaned up main and identifycard" />
     <MESSAGE value="added play again loop logic" />
     <MESSAGE value="prompt color changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="prompt color changes" />
+    <MESSAGE value="commented some testing stuff, added catch for incorrect number of cards scanned, can take out later" />
+    <option name="LAST_COMMIT_MESSAGE" value="commented some testing stuff, added catch for incorrect number of cards scanned, can take out later" />
   </component>
 </project>
