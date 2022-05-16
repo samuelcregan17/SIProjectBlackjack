@@ -23,7 +23,7 @@ def getContours(imgResults, img):
         area = cv2.contourArea(cnt)
         peri = cv2.arcLength(cnt, True)
         corners = cv2.approxPolyDP(cnt, 0.02 * peri, True)
-        if (len(corners) == 4) & (area > 500):   #if the shape has four corners, assume its a card, unless diamond, then need area
+        if (len(corners) == 4) & (area > 100):   #if the shape has four corners, assume its a card, unless diamond, then need area
             cardArray.append(createCardImg(img, corners))
 
     return cardArray

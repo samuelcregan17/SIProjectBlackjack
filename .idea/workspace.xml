@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e97988ea-e098-41bd-8942-fb3a31e9cad0" name="Changes" comment="commented some testing stuff, added catch for incorrect number of cards scanned, can take out later">
+    <list default="true" id="e97988ea-e098-41bd-8942-fb3a31e9cad0" name="Changes" comment="took out correct num card check, added functionality to have user scan cards if the prompt is to hit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detectCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/detectCard.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652656209588</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="took out correct num card check, added functionality to have user scan cards if the prompt is to hit">
+      <created>1652669011503</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652669011503</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -275,6 +282,7 @@
     <MESSAGE value="added play again loop logic" />
     <MESSAGE value="prompt color changes" />
     <MESSAGE value="commented some testing stuff, added catch for incorrect number of cards scanned, can take out later" />
-    <option name="LAST_COMMIT_MESSAGE" value="commented some testing stuff, added catch for incorrect number of cards scanned, can take out later" />
+    <MESSAGE value="took out correct num card check, added functionality to have user scan cards if the prompt is to hit" />
+    <option name="LAST_COMMIT_MESSAGE" value="took out correct num card check, added functionality to have user scan cards if the prompt is to hit" />
   </component>
 </project>
