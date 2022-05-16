@@ -2,15 +2,6 @@ import cv2
 import numpy as np
 import os
 
-path2 = 'CardsTest' #test image directory
-
-
-images2 = [] #array to store test images
-
-classNames2 = [] #array to store names of test images
-
-testList = os.listdir(path2)  # creates list of all test image names
-
 
 # create the baseline images that we will compare the detected cards to (using bicycle card set)
 def createBaselineImgs():
@@ -62,7 +53,6 @@ def findID(img, desList):
 
 # determines the number value of the card based on the card description
 def determineCardVal(cardName):
-    cardVal = 10 # set initial value to ten, if the card is not 1 - 9, then it is 10 or face card
     firstLetter = cardName[0]
     if firstLetter == 'T' or firstLetter == 'J' or firstLetter == 'Q' or firstLetter == 'K':
         cardVal = 10
@@ -80,6 +70,7 @@ def matchCards(cardArray):
     images, classNames = createBaselineImgs()
     descriptionList = findDescription(images)
 
+    # loop through every card detected and find the best match and determine attributes of each card
     for card in cardArray:
         id = findID(card, descriptionList)
         cardName = classNames[id]

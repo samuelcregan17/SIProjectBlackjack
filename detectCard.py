@@ -9,7 +9,7 @@ def getContours(imgResults, img):
     imgBlur = cv2.GaussianBlur(imgGray, (7, 7), 1)
     imgCanny = cv2.Canny(imgBlur, 50, 100)
 
-    # for debugging
+    # for debugging, shows the canny image
     # cv2.imshow("Canny", imgCanny)
 
     #opencv method for finding contours

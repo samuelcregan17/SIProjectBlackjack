@@ -16,10 +16,11 @@ def main():
     playAgainPrompt = "To play again, press 'w'. To quit, press 'e'"
     continuePrompt = "Press 'w' when ready to scan your next card."
 
-    #setup video feed
+    #setup video feed, index depends on where the camera is plugged in
     cap = cv2.VideoCapture(1)
     cap.set(3, 640) #set width
     cap.set(4, 480) #set height
+
     while True:
         # call method to prompt the user to scan the players cards
         playerCardNames, playerCardValues = scanCards(cap, userPrompt)
@@ -37,6 +38,8 @@ def main():
         suggestedMove = algorithm.determineMove(playerCardValues, dealerCardValues, False)
         #testing print(suggestedMove)
 
+        # in the event the algorithm tells you to hit, continue to prompt user to scan cards
+        # until result is a stand or bust
         while suggestedMove == "Hit":
             displayMove(cap, continuePrompt, suggestedMove)
             playerCardNames, playerCardValues = scanCards(cap, userPrompt)
@@ -44,9 +47,11 @@ def main():
             print(playerCardValues)
             suggestedMove = algorithm.determineMove(playerCardValues, dealerCardValues, False)
 
+        # display move to the user and prompt to play again or not
         playAgain = displayMove(cap, playAgainPrompt, suggestedMove)
 
 
+        # if user selects play again, run game again. If quit, exit loop and program
         if playAgain:
             pass
         else:
@@ -79,14 +84,17 @@ def scanCards(cap, prompt1):
         upper = np.array([h_max, l_max, s_max])
         mask = cv2.inRange(imgHLS, lower, upper)
         imgResults = cv2.bitwise_and(img, img, mask=mask)
-        cv2.imshow("Results", imgResults) #may delete this from final code, don't think we need the mask displayed, good for debugging
+        cv2.imshow("Results", imgResults)
 
+        # wait for user to press button to scan cards
         if cv2.waitKey(1) & 0xFF == ord('q'):
             cardArray2 = detectCard.getContours(imgResults, img)
             cardNames, cardValues = identifyCard.matchCards(cardArray2)
 
             return cardNames, cardValues
 
+# this method is where we display the suggested move to the user and prompt the next action,
+# either play again continue to scan the next cards in event of a hit
 def displayMove(cap, prompt, move):
     move = move + "!"
     while True:
