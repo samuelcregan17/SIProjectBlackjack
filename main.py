@@ -105,6 +105,7 @@ def displayMove(cap, prompt, move):
 
         cv2.imshow("Original", img)
 
+        # wait for user input on what to do next
         if cv2.waitKey(1) & 0xFF == ord('w'):
             return True
         elif cv2.waitKey(1) & 0xFF == ord('e'):
